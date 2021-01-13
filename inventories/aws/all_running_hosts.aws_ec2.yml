@@ -4,6 +4,7 @@ regions:
 
 filters:
   "instance-state-name": running
+  "instance-state-name": stopped
 strict_permissions: False
 
 hostnames:
