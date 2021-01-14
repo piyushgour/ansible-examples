@@ -1,15 +1,11 @@
 plugin: aws_ec2
 regions:
   - us-east-1
-
 filters:
-  "instance-state-name": running
-  "instance-state-name": stopped
+  "instance-state-name": ["running", "stopped"]
 strict_permissions: False
-
 hostnames:
-  - tag:Name
-  
+  - tag:Name  
 keyed_groups:
 - prefix: tag
   key: tags
