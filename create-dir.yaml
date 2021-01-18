@@ -1,0 +1,10 @@
+---
+- name: Create Directory
+  hosts: all
+  remote_user: ubuntu
+  tasks:
+    -  name: Create a working directory
+       file:
+         path:  /home/ubuntu/test-dir
+         state: directory
+         mode: 'u+rwx'
