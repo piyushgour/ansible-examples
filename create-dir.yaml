@@ -9,7 +9,7 @@
 #          state: directory
 #          mode: 'u+rwx'
 ---
-- hosts:
+- hosts: all
   #remote_user: root
   roles:
     - role/create-dir
