@@ -1,0 +1,7 @@
+---
+# tasks file for role/create-dir
+-  name: Create a working directory
+   file:
+     path:  /home/ubuntu/test-dir
+     state: directory
+     mode: 'u+rwx'
