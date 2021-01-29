@@ -6,12 +6,11 @@ filters:
 strict_permissions: False
 
 hostnames:
-  - private-ip-address
+  - dns-name
   
 keyed_groups:
 - prefix: tag
   key: tags.PodName
-  separator: ''
   
 compose:
   ansible_host: private_ip_address
