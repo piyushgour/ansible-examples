@@ -2,12 +2,11 @@ plugin: aws_ec2
 regions:
   - us-east-1
 filters:
-  "instance-state-name": ["running", "stopped"]
+  "instance-state-name": running
 strict_permissions: False
 hostnames:
-  - tag:Name  
+  - tag:PodName  
 keyed_groups:
-- prefix: tag
-  key: tags
+  key: tags.PodName
 compose:
-  ansible_host: public_ip_address
+  ansible_host: private_ip_address
