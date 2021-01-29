@@ -7,6 +7,6 @@ strict_permissions: False
 hostnames:
   - tag:PodName  
 keyed_groups:
-  key: tags.PodName
+  key: tags
 compose:
   ansible_host: private_ip_address
