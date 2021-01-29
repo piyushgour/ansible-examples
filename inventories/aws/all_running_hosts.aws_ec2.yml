@@ -3,10 +3,9 @@ regions:
   - us-east-1
 filters:
   "instance-state-name": running
+  tag:PodName: SQA
 strict_permissions: False
 hostnames:
   - tag:PodName  
-keyed_groups:
-  key: tags
 compose:
   ansible_host: private_ip_address
