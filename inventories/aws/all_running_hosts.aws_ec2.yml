@@ -11,6 +11,7 @@ hostnames:
 keyed_groups:
 - prefix: tag
   key: tags.PodName
+  separator: ''
   
 compose:
   ansible_host: private_ip_address
