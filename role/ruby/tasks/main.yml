@@ -1,0 +1,82 @@
+---
+# tasks file for roles/ruby
+
+- name: Install dependencies for Ruby 2.7.2
+  apt: 
+    name: [ 'build-essential', 'libyaml-dev', 'libxml2-dev', 'libxslt-dev', 'autoconf', 'libc6-dev', 'ncurses-dev', 'automake', 'libtool', 'bison', 'zlib1g', 'zlib1g-dev', 'libssl-dev' ] 
+    #name: nginx
+    state: present
+  
+  #   - zlib1g # http://askubuntu.com/questions/59205/no-such-file-to-load-zlib-error-when-installing-a-gem
+  #   - zlib1g-dev  # error while installing bundler: http://stackoverflow.com/questions/9727908/cannot-load-such-file-zlib-even-after-using-rvm-pkg-install-zlib
+  #   - libssl-dev
+
+# - name: Create a working directory
+#   file:
+#     path:  /tmp/build_ruby
+#     state: directory
+#     mode: 'u+rwx'
+
+# - name: Download Ruby 2.7.2
+#   get_url:
+#     url:  https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.2.tar.gz
+#     dest: /tmp/build_ruby/ruby-2.7.2.tar.gz
+
+# - name: Unpack Ruby 2.7.2
+#   unarchive:
+#     src: /tmp/build_ruby/ruby-2.7.2.tar.gz
+#     dest: /tmp/build_ruby/
+#     remote_src: yes
+
+# - name: Build ruby
+#   command: >
+#     {{ item }}
+#     chdir=/tmp/build_ruby/ruby-2.7.2
+#     creates=/usr/local/bin/ruby
+#   with_items:
+#     - ./configure --enable-shared
+#     - make
+#     - make install
+
+# - name: Add ruby symlinks
+#   file:
+#     src: "/usr/local/bin/{{ item }}"
+#     dest: "/usr/bin/{{ item }}"
+#     state: link
+#     force: yes
+#   with_items:
+#     - erb
+#     - gem
+#     - irb
+#     - rake
+#     - rdoc
+#     - ruby
+
+# - name: Remove the working directory
+#   file:
+#     path:  /tmp/build_ruby
+#     state: absent
+
+# - name: Install bundler
+#   #shell: gem install bundler
+#   gem:
+#     name: bundler
+#     state: latest
+#     #version: 2.2.4
+#     state: present
+
+# #####################
+#   - name: Gather the packager facts
+#     package_facts:
+#       manager: auto
+
+#   - name: Package status
+#     debug:
+#       msg: "{{ item }} {{ 'installed' if item in ansible_facts.packages else 'not installed' }}"
+#     loop: "{{ pkgs }}"
+
+#   - name: Debug if package is present
+#     debug:
+#       msg: 'yes, mypackage is not present, We are installing'
+#     when: '"httpd" in ansible_facts.packages'
+# # ansible-playbook play-task.yaml -e '{ "pkgs": ["nginx", "zip", "sshd"] }'

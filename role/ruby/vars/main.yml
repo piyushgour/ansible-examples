@@ -1,0 +1,6 @@
+---
+# vars file for roles/ruby
+# - vars: 
+#      - roles/test-task/files/devops.txt
+#      - roles/test-task/files/abc.txt
+#      - roles/test-task/files/123.txt
