@@ -1,5 +1,5 @@
-- id: "Ansible-hook"
-  name: "Ansible Hook"
+- id: "ansible-lint"
+  name: "Ansible Lint"
   entry: build.sh
   types: [text]
   language: "script"
