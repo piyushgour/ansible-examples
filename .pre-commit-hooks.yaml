@@ -4,4 +4,4 @@
   types: [text]
   language: "script"
   verbose: true
-  description: "This is an example hook to demonstrate how to create a pre-commit hook"
+  description: "This  is an example hook to demonstrate how to create a pre-commit hook"
