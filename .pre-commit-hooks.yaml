@@ -1,0 +1,7 @@
+- id: "Ansible-hook"
+  name: "Ansible Hook"
+  entry: build.sh
+  types: [text]
+  language: "script"
+  verbose: true
+  description: "This is an example hook to demonstrate how to create a pre-commit hook"
