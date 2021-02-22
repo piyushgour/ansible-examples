@@ -1,5 +1,4 @@
-- repo: https://github.com/piyushgour/ansible-examples.git
-  rev: v1.0.0.15
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v3.4.0
   hooks:
-    - id: ansible-lint
-      files: \.(yaml|yml)$
+    - id: check-yaml

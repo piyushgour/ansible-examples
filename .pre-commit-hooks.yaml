@@ -1,7 +1,8 @@
-- id: "ansible-lint"
-  name: "Ansible Lint"
-  entry: build.sh
-  types: [text]
-  language: "script"
+- id: "check-yaml"
+  name: "Check Yaml"
+  entry: check-yaml
+  types: [yaml]
+  language: python
   verbose: true
-  description: "This  is an example hook to demonstrate how to create a pre-commit hook"
+  description: "This is an example hook to demonstrate how to execute python (.py) files."
+
