@@ -6,3 +6,10 @@
   verbose: true
   description: "This is an example hook to demonstrate how to execute python (.py) files."
 
+- id: "ansible-molecule-check"
+  name: "Ansible Tests using Molecule"
+  entry: ansible-molecule-test.sh
+  types: [files]
+  language: script
+  verbose: true
+  description: "This is an example hook to demonstrate how Molecule Testing."
